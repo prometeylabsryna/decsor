@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70">
+  <rect width="220" height="70" rx="8" fill="#00843D"/>
+  <!-- Stylised M letter from two chevrons -->
+  <g fill="#ffffff">
+    <polygon points="12,52 12,18 22,18 34,40 46,18 56,18 56,52 46,52 46,32 38,48 30,48 22,32 22,52"/>
+  </g>
+  <!-- Yellow accent bar -->
+  <rect x="12" y="55" width="44" height="5" rx="2" fill="#FFD700"/>
+  <!-- Text -->
+  <text x="68" y="32" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#ffffff">meest</text>
+  <text x="68" y="52" font-family="Arial Black,Arial,sans-serif" font-size="14" font-weight="700" fill="#FFD700">express</text>
+</svg>

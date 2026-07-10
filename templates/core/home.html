@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+{% load static i18n lang_tags %}
+
+{% block title %}{% trans "Led leader — Digital Equipment" %}{% endblock %}
+{% block meta_desc %}{% trans "Led leader — оптовий дистриб'ютор цифрового обладнання з 2006 року. Доставка по всій Україні. Гарантія якості." %}{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <span class="hero__eyebrow" data-reveal="fade-up">{% trans "З 2006 року на ринку" %}</span>
+      {% if hero %}
+        <h1 class="hero__title" data-reveal="fade-up" data-delay="100">
+          {% with parts=hero.title|split_brand_title %}
+            {% if parts|length == 2 %}
+              <span>{{ parts.0 }}</span> — {{ parts.1 }}
+            {% else %}
+              {{ parts.0 }}
+            {% endif %}
+          {% endwith %}
+        </h1>
+        {% if hero.subtitle %}
+          <p class="hero__subtitle" data-reveal="fade-up" data-delay="200">{{ hero.subtitle }}</p>
+        {% endif %}
+        {% if hero.body %}
+          <p class="hero__body" data-reveal="fade-up" data-delay="300">{{ hero.body }}</p>
+        {% endif %}
+        <div class="hero__actions" data-reveal="fade-up" data-delay="400">
+          {% if hero.cta_text %}
+            <a href="{{ hero.cta_url|default:'#cooperation' }}" class="btn btn-primary">
+              {{ hero.cta_text }}
+            </a>
+          {% endif %}
+          <a href="#services" class="btn btn-outline">{% trans "Наші послуги" %}</a>
+        </div>
+      {% else %}
+        <h1 class="hero__title" data-reveal="fade-up" data-delay="100">
+          {% if LANGUAGE_CODE == 'en' %}
+            <span>LED LEADER</span> — DIGITAL EQUIPMENT
+          {% else %}
+            <span>LED LEADER</span> — DIGITAL EQUIPMENT
+          {% endif %}
+        </h1>
+        <p class="hero__subtitle" data-reveal="fade-up" data-delay="200">{% trans "На ринку мобільних комунікацій з 2006 року" %}</p>
+        <div class="hero__actions" data-reveal="fade-up" data-delay="300">
+          <a href="#cooperation" class="btn btn-primary">{% trans "Зв'язатися з нами" %}</a>
+          <a href="#services" class="btn btn-outline">{% trans "Наші послуги" %}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== COOPERATION BANNER ===== -->
+{% if cooperations %}
+  {% with coop=cooperations.0 %}
+  <section class="coop-banner" id="cooperation">
+    <div class="container">
+      <div class="coop-banner__inner">
+        <div class="coop-banner__text" data-reveal="fade-left">
+          <h2>{{ coop.heading }}</h2>
+          <p>{{ coop.body }}</p>
+        </div>
+        {% if coop.cta_email %}
+          <a href="mailto:{{ coop.cta_email }}" class="coop-banner__email" data-reveal="fade-right">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            {{ coop.cta_email }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endwith %}
+{% endif %}
+
+<!-- ===== SERVICES ===== -->
+{% if services %}
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title" data-reveal="fade-up">{% trans "Оптовий продаж цифрових товарів" %}</h2>
+    <div class="services__grid">
+      {% for service in services %}
+      <article class="service-card" data-reveal="fade-up" data-delay="{% cycle '0' '100' '200' '300' %}">
+        <div class="service-card__icon">
+          {% if service.icon == 'handshake' %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          {% elif service.icon == 'truck' %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          {% elif service.icon == 'shield-check' %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          {% elif service.icon == 'wrench' %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          {% else %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          {% endif %}
+        </div>
+        <h3 class="service-card__title">{{ service.title }}</h3>
+        <p class="service-card__desc">{{ service.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ===== ADVANTAGES ===== -->
+{% if advantages %}
+<section class="advantages" id="advantages">
+  <div class="container">
+    <h2 class="section-title light" data-reveal="fade-up">{% trans "Переваги роботи з нашою компанією" %}</h2>
+    <div class="advantages__grid">
+      {% for adv in advantages %}
+      <div class="adv-item" data-reveal="fade-up" data-delay="{% cycle '0' '100' '200' '300' %}">
+        <div class="adv-item__icon">
+          {% if adv.icon == 'star' %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          {% elif adv.icon == 'tag' %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          {% elif adv.icon == 'globe' %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          {% elif adv.icon == 'heart' %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          {% else %}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          {% endif %}
+        </div>
+        <p class="adv-item__title">{{ adv.title }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ===== NEWS ===== -->
+{% if news %}
+<section class="news" id="news">
+  <div class="container">
+    <div class="news__header" data-reveal="fade-up">
+      <h2 class="section-title" data-reveal="fade-up">{% trans "Новини компанії" %}</h2>
+      <a href="{% url 'news:list' %}?cat=company" class="news__all-link">
+        {% trans "Всі новини" %}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="news__grid">
+      {% for article in news %}
+      <article class="news-card" data-reveal="fade-up" data-delay="{% cycle '0' '100' '200' %}">
+        <div class="news-card__body">
+          <time class="news-card__date" datetime="{{ article.published_at|date:'Y-m-d' }}">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            {{ article.published_at|date:"d.m.Y" }}
+          </time>
+          <h3 class="news-card__title">{{ article.title }}</h3>
+          {% if article.excerpt %}
+            <p class="news-card__excerpt">{{ article.excerpt }}</p>
+          {% endif %}
+          <a href="{% url 'news:detail' article.slug %}" class="news-card__link">
+            {% trans "Читати далі" %}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        {% if article.image %}
+        <div class="news-card__img">
+          <img src="{{ article.image.url }}" alt="{{ article.title }}" loading="lazy">
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ===== SUBSCRIBE ===== -->
+<section class="subscribe">
+  <div class="container">
+    <div class="subscribe__inner" data-reveal="zoom">
+      <h2 class="subscribe__title">{% trans "Підписуйтесь на наші новини" %}</h2>
+      <p class="subscribe__desc">{% trans "Залишайтесь в курсі нових продуктів та оновлень" %}</p>
+      {% if subscribed %}
+        <p class="subscribe__success" role="alert">{% trans "Дякуємо! Ви підписалися на оновлення." %}</p>
+      {% else %}
+        <form class="subscribe__form" method="post" novalidate>
+          {% csrf_token %}
+          <label for="sub-email" class="sr-only">{% trans "Ваш email" %}</label>
+          <input
+            type="email"
+            id="sub-email"
+            name="email"
+            class="subscribe__input"
+            placeholder="{% trans 'Ваш email' %}"
+            autocomplete="email"
+            required
+          >
+          <button type="submit" class="btn btn-primary">{% trans "Підписатися" %}</button>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== BRANDS ===== -->
+{% if brands %}
+<section class="brands" id="brands">
+  <div class="container">
+    <h2 class="section-title center" data-reveal="fade-up">{% trans "Бренди" %}</h2>
+    <div class="brands__grid" data-reveal="fade-up" data-delay="100">
+      {% for brand in brands %}
+        <a
+          href="{{ brand.url|default:'#' }}"
+          class="brand-item"
+          {% if brand.url %}target="_blank" rel="noopener noreferrer"{% endif %}
+        >
+          {{ brand.name }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

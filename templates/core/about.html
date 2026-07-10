@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n contact_tags %}
+
+{% block title %}{% trans "Про компанію — Led leader" %}{% endblock %}
+{% block meta_desc %}{% trans "Компанія Led leader — оптовий постачальник цифрової техніки з 2006 року. Якість, гарантія, широкий асортимент." %}{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="container">
+    <div class="page-banner__inner">
+      <h1 class="page-banner__title">{% trans "Про компанію" %}</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">{% trans "Головна" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__current">{% trans "Про компанію" %}</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="page-layout">
+
+      <aside class="sidebar">
+        <p class="sidebar__heading">{% trans "Про компанію" %}</p>
+        <ul class="sidebar__nav">
+          <li><a href="{% url 'core:about' %}" class="active">{% trans "Про компанію" %}</a></li>
+          <li><a href="{% url 'core:cooperation' %}">{% trans "Співпраця" %}</a></li>
+          <li><a href="{% url 'core:faq' %}">F.A.Q.</a></li>
+        </ul>
+      </aside>
+
+      <div class="content-body" data-reveal="fade-up">
+        <h2>Led leader — Digital Equipment</h2>
+        {{ page_content.about_intro|safe }}
+        <p>{% trans "Звертайтесь за телефоном" %} ☎ <a href="tel:{{ site_settings.phone|tel_href }}">{{ site_settings.phone }}</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

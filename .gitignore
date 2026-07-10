@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+logs/*.log
+public/.htaccess
+tmp/restart.txt
+.DS_Store

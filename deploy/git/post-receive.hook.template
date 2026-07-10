@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Git hook для push-to-deploy на VPS / FREEhost.
+#
+# На сервері:
+#   mkdir -p ~/repos/itmCopy.git
+#   cd ~/repos/itmCopy.git && git init --bare
+#   cp deploy/git/post-receive.hook.template hooks/post-receive
+#   chmod +x hooks/post-receive
+#   # відредагувати WORK_TREE нижче
+#
+# Локально:
+#   git remote add production ssh://USER@SERVER/~/repos/itmCopy.git
+#   git push production main
+
+set -o errexit
+set -o pipefail
+
+WORK_TREE="/var/www/itmcopy"
+GIT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+
+echo "==> Deploy to $WORK_TREE"
+
+git --work-tree="$WORK_TREE" --git-dir="$GIT_DIR" checkout -f
+
+cd "$WORK_TREE"
+bash scripts/deploy_vps.sh update
+
+echo "==> Done"

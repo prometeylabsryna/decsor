@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "F.A.Q. — Часті запитання — Led leader" %}{% endblock %}
+{% block meta_desc %}{% trans "Відповіді на часті запитання про роботу з компанією Led leader: замовлення, доставка, оплата, гарантія." %}{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="container">
+    <div class="page-banner__inner">
+      <h1 class="page-banner__title">F.A.Q.</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">{% trans "Головна" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href="{% url 'core:about' %}">{% trans "Про компанію" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__current">F.A.Q.</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="page-layout">
+
+      <aside class="sidebar">
+        <p class="sidebar__heading">{% trans "Про компанію" %}</p>
+        <ul class="sidebar__nav">
+          <li><a href="{% url 'core:about' %}">{% trans "Про компанію" %}</a></li>
+          <li><a href="{% url 'core:cooperation' %}">{% trans "Співпраця" %}</a></li>
+          <li><a href="{% url 'core:faq' %}" class="active">F.A.Q.</a></li>
+        </ul>
+      </aside>
+
+      <div class="content-body" data-reveal="fade-up">
+        <h2>{% trans "Найчастіші питання" %}</h2>
+        <div class="faq-list" id="faqList">
+
+          {% for item in faq_items %}
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">
+              {{ item.question }}
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-item__a">{{ item.answer|safe }}</div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.querySelectorAll('.faq-item__q').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var item = btn.closest('.faq-item');
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-item').forEach(function (el) {
+      el.classList.remove('is-open');
+      el.querySelector('.faq-item__q').setAttribute('aria-expanded', 'false');
+    });
+    if (!expanded) {
+      item.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+{% endblock %}

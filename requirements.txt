@@ -1,0 +1,13 @@
+Django==5.1.4
+psycopg2-binary==2.9.10
+PyMySQL==1.1.1
+dj-database-url==2.3.0
+whitenoise==6.8.2
+gunicorn==23.0.0
+Pillow==11.1.0
+django-solo==2.3.0
+python-dotenv==1.0.1
+django-unfold==0.93.0
+django-tinymce==5.0.0
+django-modeltranslation==0.20.3
+feedparser==6.0.12

@@ -1,0 +1,1268 @@
+# English translations for Led leader project.
+# Copyright (C) 2026
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Led leader 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-28 14:25+0300\n"
+"PO-Revision-Date: 2026-05-19 12:00+0300\n"
+"Last-Translator: Dev\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Новини ринку"
+msgstr "Market News"
+
+msgid "Новини компанії"
+msgstr "Company News"
+
+msgid "Новини"
+msgstr "News"
+
+msgid "Led leader — Digital Equipment"
+msgstr "Led leader — Digital Equipment"
+
+msgid "Led leader — оптовий дистриб'ютор цифрового обладнання з 2006 року."
+msgstr "Led leader — wholesale distributor of digital equipment since 2006."
+
+# ---------------------------------------------------------------------------
+# base.html
+# ---------------------------------------------------------------------------
+msgid "Меню"
+msgstr "Menu"
+
+msgid "Закрити меню"
+msgstr "Close menu"
+
+msgid "Головна"
+msgstr "Home"
+
+msgid "Всі новини"
+msgstr "All News"
+
+msgid "Про компанію"
+msgstr "About Us"
+
+msgid "Співпраця"
+msgstr "Cooperation"
+
+msgid "Доставка"
+msgstr "Delivery"
+
+msgid "Замовлення та оплата"
+msgstr "Orders & Payment"
+
+msgid "Транспортні компанії"
+msgstr "Transport Companies"
+
+msgid "Партнери"
+msgstr "Partners"
+
+msgid "Партнерська програма"
+msgstr "Partnership Program"
+
+msgid "Стати партнером"
+msgstr "Become a Partner"
+
+msgid "Сервіс і гарантія"
+msgstr "Service & Warranty"
+
+msgid "Контакти"
+msgstr "Contacts"
+
+msgid "на головну"
+msgstr "go to home"
+
+msgid "Навігація"
+msgstr "Navigation"
+
+msgid "Відкрити меню"
+msgstr "Open menu"
+
+msgid ""
+"Оптовий дистриб'ютор цифрового обладнання. На ринку мобільних комунікацій з "
+"2006 року."
+msgstr ""
+"Wholesale distributor of digital equipment. On the mobile communications "
+"market since 2006."
+
+msgid "Написати нам"
+msgstr "Contact Us"
+
+msgid "Всі права захищені."
+msgstr "All rights reserved."
+
+msgid "Розроблено в PrometeyLabs"
+msgstr "Developed by PrometeyLabs"
+
+# ---------------------------------------------------------------------------
+# templates/core/about.html
+# ---------------------------------------------------------------------------
+msgid "Про компанію — Led leader"
+msgstr "About Us — Led leader"
+
+msgid ""
+"Компанія Led leader — оптовий постачальник цифрової техніки з 2006 року. "
+"Якість, гарантія, широкий асортимент."
+msgstr ""
+"Led leader — wholesale supplier of digital equipment since 2006. Quality, "
+"warranty, wide assortment."
+
+msgid ""
+"Компанія <strong>Led leader — DIGITAL EQUIPMENT</strong> існує на ринку "
+"мобільного зв'язку з 2006 року. За роки наполегливої праці наша компанія "
+"встановила для себе чіткі пріоритети, які на даний момент є невід'ємною "
+"частиною:"
+msgstr ""
+"Company <strong>Led leader — DIGITAL EQUIPMENT</strong> has been operating "
+"in the mobile communications market since 2006. Over years of dedicated "
+"work, we have established clear priorities that form an integral part of "
+"everything we do:"
+
+msgid "Тільки якісна продукція."
+msgstr "Quality products only."
+
+msgid "Розумна цінова політика."
+msgstr "Reasonable pricing policy."
+
+msgid "Співпраця з всесвітньо відомими брендами."
+msgstr "Cooperation with world-renowned brands."
+
+msgid "Клієнт завжди правий!"
+msgstr "The customer is always right!"
+
+msgid ""
+"Компанія здійснює підтримку клієнтів на всіх етапах роботи, а саме: надання "
+"інформаційної допомоги; індивідуально підібраних для кожного зручних "
+"взаєморозрахунків; гарантійне обслуговування."
+msgstr ""
+"The company supports clients at every stage of cooperation: providing "
+"informational assistance, individually tailored payment terms, and warranty "
+"service."
+
+msgid ""
+"Завдяки нашим можливостям на всій території України та Європи, ви можете "
+"здійснити оптову закупівлю цікавих для вас мобільних телефонів, смартфонів, "
+"планшетів у великому ціновому діапазоні — від недорогих, доступних кожному, "
+"до ексклюзивних, обмежених у випуску. Також ми працюємо не лише за фактом "
+"наявності продукції, а й за попереднім замовленням, оскільки нашою головною "
+"метою є не сама суть угоди, а забезпечення максимально зручних та приємних "
+"умов для покупця, дотримання його прав та потреб — і з матеріальної, і з "
+"етичної сторони."
+msgstr ""
+"Thanks to our reach across Ukraine and Europe, you can make wholesale "
+"purchases of mobile phones, smartphones and tablets across a wide price "
+"range — from affordable everyday models to exclusive limited editions. We "
+"also work on pre-order basis, because our primary goal is not just the "
+"transaction itself, but providing the most comfortable and pleasant "
+"conditions for every buyer, respecting their rights and needs — both "
+"financially and ethically."
+
+msgid ""
+"Наша компанія є учасником преміум-класу платформи <strong>GSMexchange</"
+"strong> — міжнародного торгового майданчика, створеного для допомоги оптовим "
+"торговцям GSM-гаджетами, заснованого в Дубліні; як відомо, всі її учасники "
+"перевіряються на відповідність вимогам безпеки торгівлі — а це вже говорить "
+"про багато!"
+msgstr ""
+"Our company is a premium member of the <strong>GSMexchange</strong> platform "
+"— an international marketplace founded in Dublin to assist wholesale GSM "
+"gadget traders; as all members are vetted against strict trade security "
+"requirements, this membership speaks for itself!"
+
+msgid ""
+"Отже, якщо вам потрібна якісна техніка за приємною ціною в будь-яких обсягах "
+"— вам саме до нас!"
+msgstr ""
+"So, if you need quality equipment at a great price in any quantity — we are "
+"the right choice!"
+
+msgid "Звертайтесь за телефоном"
+msgstr "Call us"
+
+# ---------------------------------------------------------------------------
+# templates/core/contacts.html
+# ---------------------------------------------------------------------------
+msgid "Контакти — Led leader"
+msgstr "Contacts — Led leader"
+
+msgid ""
+"Контактна інформація компанії Led leader. Напишіть нам або зателефонуйте для "
+"консультації."
+msgstr ""
+"Led leader company contact information. Write to us or call for a "
+"consultation."
+
+msgid "Електронна пошта"
+msgstr "Email"
+
+msgid "Телефон (багатоканальний)"
+msgstr "Phone (multi-line)"
+
+msgid "Адреса"
+msgstr "Address"
+
+msgid "Україна, Київ"
+msgstr "Ukraine, Kyiv"
+
+msgid "Графік роботи"
+msgstr "Working Hours"
+
+msgid "Пн–Пт: 09:00 – 18:00"
+msgstr "Mon–Fri: 09:00 – 18:00"
+
+msgid "Сб: 10:00 – 16:00"
+msgstr "Sat: 10:00 – 16:00"
+
+msgid "Нд: вихідний"
+msgstr "Sun: closed"
+
+msgid "Напишіть нам"
+msgstr "Contact Us"
+
+msgid ""
+"З питань оптових закупівель та співпраці напишіть нам на пошту і менеджер "
+"зв'яжеться з вами у найкоротший термін."
+msgstr ""
+"For wholesale purchase and cooperation inquiries, email us and a manager "
+"will get back to you as soon as possible."
+
+msgid "Зв'язатися з нами"
+msgstr "Contact Us"
+
+# ---------------------------------------------------------------------------
+# templates/core/cooperation.html
+# ---------------------------------------------------------------------------
+msgid "Співпраця — Led leader"
+msgstr "Cooperation — Led leader"
+
+msgid ""
+"Умови співпраці з компанією Led leader. Просування брендів, партнерська "
+"програма, постачальники цифрової техніки."
+msgstr ""
+"Cooperation terms with Led leader. Brand promotion, partnership program, "
+"digital equipment suppliers."
+
+msgid "Співпраця з Led leader"
+msgstr "Cooperation with Led leader"
+
+msgid ""
+"Компанія «Led leader» готова до взаємовигідної співпраці з точки зору "
+"просування нових брендів на ринок мобільних телефонів і активного "
+"висвітлення в ЗМІ технічних особливостей і переваг перспективних розробок, "
+"розрахованих на широке коло споживачів. Паралельно ми готові співпрацювати з "
+"виробниками та постачальниками будь-яких цифрових продуктів. Запрошуємо до "
+"діалогу регіональних представників, які зацікавлені у всебічному просуванні "
+"нових продуктів на ринок мобільних телефонів і різноманітної цифрової "
+"техніки."
+msgstr ""
+"Led leader is open to mutually beneficial cooperation in promoting new "
+"brands to the mobile phone market and actively highlighting the technical "
+"features of promising products in the media. We are also ready to work with "
+"manufacturers and suppliers of any digital products. We invite regional "
+"representatives interested in comprehensive promotion of new products to the "
+"mobile phone and digital equipment market to get in touch."
+
+msgid "Карта Європи"
+msgstr "Map of Europe"
+
+msgid ""
+"Усіх, хто зацікавлений у цій пропозиції, просимо зв'язатися з нами телефоном "
+"або електронною поштою"
+msgstr "All interested parties are welcome to contact us by phone or email"
+
+msgid "багатоканальний"
+msgstr "multi-line"
+
+msgid "ПН–ПТ"
+msgstr "MON–FRI"
+
+msgid "СБ"
+msgstr "SAT"
+
+msgid "НД"
+msgstr "SUN"
+
+msgid "вихідний"
+msgstr "closed"
+
+# ---------------------------------------------------------------------------
+# templates/core/delivery.html
+# ---------------------------------------------------------------------------
+msgid "Доставка — Led leader"
+msgstr "Delivery — Led leader"
+
+msgid ""
+"Умови доставки продукції компанії Led leader. Відправка по всій Україні "
+"зручним для вас перевізником."
+msgstr ""
+"Led leader delivery terms. Shipping across Ukraine via your preferred "
+"carrier."
+
+msgid ""
+"Стати клієнтом компанії Led leader може будь-яка юридична особа або "
+"підприємець, який бажає здійснювати регулярні покупки мобільних телефонів у "
+"певному обсязі."
+msgstr ""
+"Any legal entity or entrepreneur who wishes to make regular purchases of "
+"mobile phones in a certain volume can become a Led leader client."
+
+msgid "Компанія пропонує своїм клієнтам наступні умови співпраці:"
+msgstr "The company offers its clients the following cooperation terms:"
+
+msgid ""
+"Клієнтам компанії надаються пільгові умови співпраці, укладається "
+"дистриб'юторський договір."
+msgstr ""
+"Clients are provided with preferential cooperation terms and a distribution "
+"agreement is concluded."
+
+msgid "Клієнтам пропонується відстрочка платежу, торговий кредит."
+msgstr "Clients are offered deferred payment and trade credit."
+
+msgid ""
+"Гнучка система знижок, що базується на індивідуальному підході до кожного "
+"клієнта."
+msgstr ""
+"A flexible discount system based on an individual approach to each client."
+
+msgid ""
+"У кожного клієнта є свій менеджер, який своєчасно попереджає про потік "
+"вашого товару."
+msgstr ""
+"Each client has a dedicated manager who keeps them informed about their "
+"shipment."
+
+msgid ""
+"Доставку товарів клієнтам по Україні здійснюють транспортні та кур'єрські "
+"організації"
+msgstr ""
+"Delivery of goods to clients across Ukraine is carried out by transport and "
+"courier companies"
+
+msgid "Транспортні послуги"
+msgstr "Transport Services"
+
+msgid "Відправлення вантажу здійснюється того ж дня після бронювання."
+msgstr "Shipments are dispatched on the same day as booking."
+
+msgid "Рахунок на витрати на забезпечення позбавить вас від зайвих проблем."
+msgstr "An expense account will save you from unnecessary hassle."
+
+msgid "Можливість оформлення замовлень телефоном або електронною поштою:"
+msgstr "Orders can be placed by phone or email:"
+
+msgid "Ми пропонуємо кожному клієнту індивідуальну схему співпраці."
+msgstr "We offer every client an individual cooperation scheme."
+
+msgid "Умови знижок"
+msgstr "Discount Terms"
+
+msgid ""
+"Знижки та додаткові умови обговорюються з вашим персональним менеджером. На "
+"додаткові знижки також може розраховувати будь-який клієнт фірми Led leader, "
+"який бажає здійснити разову, оптову покупку на суму понад 2000 доларів США. "
+"Знижка в цьому випадку встановлюється за індивідуальною домовленістю. Оплата "
+"здійснюється в національній валюті за поточним курсом на дату оплати товару."
+msgstr ""
+"Discounts and additional terms are discussed with your personal manager. "
+"Additional discounts are also available to any Led leader client wishing to "
+"make a one-time wholesale purchase exceeding $2,000. The discount in this "
+"case is determined by individual agreement. Payment is made in national "
+"currency at the current exchange rate on the date of payment."
+
+msgid "Відділ продажів:"
+msgstr "Sales Department:"
+
+msgid "внутрішній №: 15, 17, 45, 50, 94"
+msgstr "ext.: 15, 17, 45, 50, 94"
+
+msgid "внутрішній №:"
+msgstr "ext.:"
+
+# ---------------------------------------------------------------------------
+# templates/core/delivery_order.html
+# ---------------------------------------------------------------------------
+msgid "Замовлення та оплата — Led leader"
+msgstr "Orders & Payment — Led leader"
+
+msgid "Як зробити замовлення та способи оплати в компанії Led leader."
+msgstr "How to place an order and payment methods at Led leader."
+
+msgid "Як зробити замовлення"
+msgstr "How to Place an Order"
+
+msgid "Крок 1 — Обрати товар"
+msgstr "Step 1 — Choose a Product"
+
+msgid ""
+"Ознайомтеся з нашим асортиментом та зв'яжіться з менеджером для отримання "
+"актуального прайс-листа та інформації про наявність товару на складі."
+msgstr ""
+"Browse our assortment and contact a manager to get the latest price list and "
+"stock availability information."
+
+msgid "Крок 2 — Оформити заявку"
+msgstr "Step 2 — Submit a Request"
+
+msgid "Надішліть заявку на email"
+msgstr "Send your request to"
+
+msgid "із зазначенням:"
+msgstr "with the following details:"
+
+msgid "Назви та артикулу товару"
+msgstr "Product name and SKU"
+
+msgid "Необхідної кількості"
+msgstr "Required quantity"
+
+msgid "Ваших контактних даних"
+msgstr "Your contact details"
+
+msgid "Адреси доставки"
+msgstr "Delivery address"
+
+msgid "Крок 3 — Підтвердження та оплата"
+msgstr "Step 3 — Confirmation & Payment"
+
+msgid ""
+"Після отримання заявки менеджер сформує рахунок і надішле його вам. "
+"Замовлення відправляється після підтвердження оплати."
+msgstr ""
+"After receiving your request, the manager will issue an invoice and send it "
+"to you. The order is dispatched after payment confirmation."
+
+msgid "Способи оплати"
+msgstr "Payment Methods"
+
+msgid "Безготівковий розрахунок"
+msgstr "Bank Transfer"
+
+msgid ""
+"Для юридичних осіб та ФОП — оплата за виставленим рахунком на поточний "
+"рахунок компанії. Усі необхідні документи (рахунок, видаткова накладна, ТТН) "
+"надаються в електронному вигляді."
+msgstr ""
+"For legal entities and sole proprietors — payment by invoice to the "
+"company's current account. All required documents (invoice, delivery note, "
+"waybill) are provided electronically."
+
+msgid "Оплата на картку"
+msgstr "Card Payment"
+
+msgid ""
+"Для фізичних осіб та невеликих замовлень — оплата на картку VISA/MasterCard "
+"(Приватбанк або Monobank)."
+msgstr ""
+"For individuals and small orders — payment by VISA/MasterCard (Privatbank or "
+"Monobank)."
+
+msgid "Відстрочка платежу"
+msgstr "Deferred Payment"
+
+msgid ""
+"Для постійних клієнтів можлива відстрочка платежу від 7 до 30 днів. Умови "
+"визначаються індивідуально."
+msgstr ""
+"Regular clients may be offered deferred payment terms of 7 to 30 days. "
+"Conditions are determined individually."
+
+# ---------------------------------------------------------------------------
+# templates/core/delivery_transport.html
+# ---------------------------------------------------------------------------
+msgid "Транспортні компанії — Led leader"
+msgstr "Transport Companies — Led leader"
+
+msgid ""
+"Перелік транспортних компаній для доставки замовлень від Led leader по "
+"Україні та Європі."
+msgstr ""
+"List of transport companies for delivering Led leader orders across Ukraine "
+"and Europe."
+
+msgid "Наші транспортні партнери"
+msgstr "Our Transport Partners"
+
+msgid ""
+"Ми співпрацюємо з надійними транспортними компаніями для забезпечення "
+"своєчасної та безпечної доставки замовлень по всій Україні та Європі."
+msgstr ""
+"We partner with reliable transport companies to ensure timely and safe "
+"delivery of orders across Ukraine and Europe."
+
+msgid "Нова Пошта"
+msgstr "Nova Poshta"
+
+msgid ""
+"Найбільша приватна служба доставки в Україні. Доставка до відділення або "
+"кур'єром за адресою. Широка мережа — понад 6 000 відділень по всій Україні. "
+"Терміни: 1–3 робочих дні."
+msgstr ""
+"Ukraine's largest private delivery service. Delivery to a branch or by "
+"courier to your address. Extensive network of over 6,000 branches across "
+"Ukraine. Delivery time: 1–3 business days."
+
+msgid "Укрпошта"
+msgstr "Ukrposhta"
+
+msgid ""
+"Національний оператор поштового зв'язку. Доставка в усі куточки України, "
+"включаючи невеликі населені пункти. Терміни: 3–7 робочих днів."
+msgstr ""
+"The national postal operator. Delivery to all corners of Ukraine, including "
+"small settlements. Delivery time: 3–7 business days."
+
+msgid "SAT (Служба авто-транспорту)"
+msgstr "SAT (Auto Transport Service)"
+
+msgid ""
+"Спеціалізується на доставці вантажів для бізнесу. Оптимальний вибір для "
+"великих оптових замовлень. Терміни: 1–4 робочих дні."
+msgstr ""
+"Specialises in freight delivery for businesses. The optimal choice for large "
+"wholesale orders. Delivery time: 1–4 business days."
+
+msgid ""
+"Міжнародна логістична компанія з широкою мережею в Україні та Європі. "
+"Надійна доставка у великих містах та регіонах. Терміни: 1–3 робочих дні."
+msgstr ""
+"An international logistics company with an extensive network across Ukraine "
+"and Europe. Reliable delivery in major cities and regions. Delivery time: 1–"
+"3 business days."
+
+msgid ""
+"Кур'єрська служба доставки по всій Україні. Швидка доставка в день "
+"оформлення або наступного дня. Покриття всіх обласних центрів та великих "
+"міст. Терміни: 1–2 робочих дні."
+msgstr ""
+"Courier delivery service across Ukraine. Fast delivery on the day of order "
+"placement or the next day. Coverage of all regional capitals and major "
+"cities. Delivery time: 1–2 business days."
+
+msgid "Самовивіз"
+msgstr "Self-Pickup"
+
+msgid ""
+"Ви можете забрати замовлення самостійно з нашого складу. Адреса та час "
+"роботи — уточнюйте у менеджера."
+msgstr ""
+"You can pick up your order directly from our warehouse. Address and working "
+"hours — please confirm with your manager."
+
+msgid "Примітка:"
+msgstr "Note:"
+
+msgid ""
+"Клієнт оплачує доставку за тарифами обраного перевізника. При замовленнях "
+"від визначеної суми — доставка за рахунок компанії (уточнюйте у менеджера)."
+msgstr ""
+"The client pays for delivery at the rates of the chosen carrier. For orders "
+"above a specified amount, delivery is covered by the company (please confirm "
+"with your manager)."
+
+# ---------------------------------------------------------------------------
+# templates/core/faq.html
+# ---------------------------------------------------------------------------
+msgid "F.A.Q. — Часті запитання — Led leader"
+msgstr "F.A.Q. — Frequently Asked Questions — Led leader"
+
+msgid ""
+"Відповіді на часті запитання про роботу з компанією Led leader: замовлення, "
+"доставка, оплата, гарантія."
+msgstr ""
+"Answers to frequently asked questions about working with Led leader: "
+"ordering, delivery, payment, warranty."
+
+msgid "Найчастіші питання"
+msgstr "Frequently Asked Questions"
+
+msgid "А що таке FAQ?"
+msgstr "What is FAQ?"
+
+msgid "Тут ви можете знайти відповіді на свої запитання."
+msgstr "Here you can find answers to your questions."
+
+msgid "Як часто ви оновлюєте ціну?"
+msgstr "How often do you update prices?"
+
+msgid "Ціна оновлюється в міру надходження товару (1–2 рази на день)."
+msgstr "Prices are updated as stock arrives (1–2 times per day)."
+
+msgid "Як мені оформити замовлення?"
+msgstr "How do I place an order?"
+
+msgid "Замовлення описано в розділі"
+msgstr "The ordering process is described in the"
+
+msgid "замовлення та оплата"
+msgstr "orders & payment"
+
+msgid "Я живу далеко від Києва, чи можете ви доставити товар в інше місто?"
+msgstr "I live far from Kyiv, can you deliver to another city?"
+
+msgid "Без жодних проблем, за умови повної оплати товару та вартості доставки"
+msgstr ""
+"No problem at all, provided full payment for the goods and delivery costs"
+
+msgid "доставка"
+msgstr "delivery"
+
+msgid "Як мені здійснити оплату за товар?"
+msgstr "How do I pay for goods?"
+
+msgid ""
+"Готівкою в нашому офісі. Банківським переказом в офісах на рахунок ТМ «Led "
+"leader». Також грошові перекази за системою VISA або MasterCard, у будь-"
+"якому відділенні банків Приватбанк, ПУМБ, ОТП банк, Монобанк."
+msgstr ""
+"Cash at our office. Bank transfer to the TM «Led leader» account. Also VISA "
+"or MasterCard transfers at any branch of Privatbank, FUIB, OTP Bank, "
+"Monobank."
+
+msgid ""
+"Ваш прайс-лист містить лише роздрібні ціни, але я хочу замовити товар оптом?"
+msgstr ""
+"Your price list only shows retail prices, but I want to order wholesale?"
+
+msgid ""
+"Щоб отримати доступ до оптових цін, вам необхідно зареєструватися на сайті "
+"або зв'язатися з менеджером по телефону або електронною поштою."
+msgstr ""
+"To access wholesale prices, you need to register on the website or contact a "
+"manager by phone or email."
+
+msgid "Чи надаєте ви гарантію на мобільні телефони?"
+msgstr "Do you provide warranty on mobile phones?"
+
+msgid ""
+"Ми надаємо гарантію на мобільні телефони 1–12 та 36 місяців з дати продажу, "
+"залежно від сертифікації телефону"
+msgstr ""
+"We provide a warranty on mobile phones of 1–12 and 36 months from the date "
+"of sale, depending on the phone's certification"
+
+msgid "Сервіс та гарантія"
+msgstr "Service & Warranty"
+
+msgid "Техніка, яка продається на вашому сайті, справжня?"
+msgstr "Is the equipment sold on your website genuine?"
+
+msgid "Техніка справжня українська та європейського зразка, сертифікована."
+msgstr "The equipment is genuine Ukrainian and European standard, certified."
+
+msgid ""
+"У вашому прайс-листі немає товарів, які б хотів замовити. Що мені робити?"
+msgstr ""
+"Your price list doesn't have the items I want to order. What should I do?"
+
+msgid ""
+"Будь ласка, зв'яжіться з менеджером та обговоріть час та можливість "
+"постачання того, що вам потрібно."
+msgstr ""
+"Please contact a manager to discuss the timing and availability of supplying "
+"what you need."
+
+msgid ""
+"Чи є у вас якісь спеціальні пропозиції або знижки для постійних клієнтів?"
+msgstr "Do you have any special offers or discounts for regular clients?"
+
+msgid ""
+"Для постійних клієнтів у нас діє гнучка система знижок. Для отримання "
+"додаткової інформації звертайтесь до менеджера."
+msgstr ""
+"We have a flexible discount system for regular clients. Contact your manager "
+"for more information."
+
+msgid "У мене є ідеї та пропозиції щодо співпраці, як я можу їх реалізувати?"
+msgstr ""
+"I have ideas and proposals for cooperation, how can I put them into practice?"
+
+msgid "Обговоріть свої ідеї з нами."
+msgstr "Discuss your ideas with us."
+
+# ---------------------------------------------------------------------------
+# templates/core/home.html
+# ---------------------------------------------------------------------------
+msgid ""
+"Led leader — оптовий дистриб'ютор цифрового обладнання з 2006 року. Доставка "
+"по всій Україні. Гарантія якості."
+msgstr ""
+"Led leader — wholesale distributor of digital equipment since 2006. Delivery "
+"across Ukraine. Quality guarantee."
+
+msgid "З 2006 року на ринку"
+msgstr "On the market since 2006"
+
+msgid "Наші послуги"
+msgstr "Our Services"
+
+msgid "На ринку мобільних комунікацій з 2006 року"
+msgstr "On the mobile communications market since 2006"
+
+msgid "Оптовий продаж цифрових товарів"
+msgstr "Wholesale Digital Goods"
+
+msgid "Переваги роботи з нашою компанією"
+msgstr "Why Work With Us"
+
+msgid "Читати далі"
+msgstr "Read More"
+
+msgid "Підписуйтесь на наші новини"
+msgstr "Subscribe to Our Newsletter"
+
+msgid "Залишайтесь в курсі нових продуктів та оновлень"
+msgstr "Stay up to date with new products and updates"
+
+msgid "Дякуємо! Ви підписалися на оновлення."
+msgstr "Thank you! You have subscribed to updates."
+
+msgid "Ваш email"
+msgstr "Your email"
+
+msgid "Підписатися"
+msgstr "Subscribe"
+
+msgid "Бренди"
+msgstr "Brands"
+
+# ---------------------------------------------------------------------------
+# templates/core/partners.html
+# ---------------------------------------------------------------------------
+msgid "Партнери — Led leader"
+msgstr "Partners — Led leader"
+
+msgid ""
+"Партнерська програма компанії Led leader. Вигідні умови для дилерів та "
+"реселерів цифрової техніки."
+msgstr ""
+"Led leader partnership program. Favorable terms for dealers and resellers of "
+"digital equipment."
+
+msgid "Карта регіонів Європи, з якими працює наша компанія"
+msgstr "Map of European Regions We Work With"
+
+msgid ""
+"Завжди відкриті до діалогу, щоб представляти нашу компанію у вашому місті."
+msgstr "Always open to dialogue to represent our company in your city."
+
+msgid "внутрішній"
+msgstr "ext."
+
+# ---------------------------------------------------------------------------
+# templates/core/partners_become.html
+# ---------------------------------------------------------------------------
+msgid "Стати партнером — Led leader"
+msgstr "Become a Partner — Led leader"
+
+msgid ""
+"Оформіть договір купівлі-продажу з Led leader та ставайте нашим партнером у "
+"найкоротший термін."
+msgstr ""
+"Sign a purchase and sale agreement with Led leader and become our partner as "
+"quickly as possible."
+
+msgid "Оформіть договір купівлі-продажу з нашою компанією"
+msgstr "Sign a Purchase and Sale Agreement with Our Company"
+
+msgid ""
+"Якщо ви хочете заощадити час і почати роботу з нашою компанією в самі "
+"короткі терміни просимо ознайомитися з:"
+msgstr ""
+"If you want to save time and start working with us as quickly as possible, "
+"please review:"
+
+msgid "Договір купівлі-продажу"
+msgstr "Purchase and Sale Agreement"
+
+msgid ""
+"У разі якщо у Вас немає претензій і побажань для зміни типового договору з "
+"компанією Led leader то підпишіть його зі свого боку і відправте його нам на "
+"адресу"
+msgstr ""
+"If you have no objections or requests to change the standard agreement with "
+"Led leader, please sign it and send it to us at"
+
+msgid "Наші менеджери зв'яжуться з вами в самий найближчий час"
+msgstr "Our managers will contact you as soon as possible"
+
+msgid "Хочете працювати у нас?"
+msgstr "Want to work with us?"
+
+msgid "Вибачте, зараз немає відкритих вакансій в нашій компанії"
+msgstr "Sorry, there are currently no open vacancies at our company"
+
+msgid "Надсилайте своє резюме на електронну пошту, із зазначенням посади:"
+msgstr "Send your CV to our email, indicating the desired position:"
+
+# ---------------------------------------------------------------------------
+# templates/core/partners_program.html
+# ---------------------------------------------------------------------------
+msgid "Партнерська програма — Led leader"
+msgstr "Partnership Program — Led leader"
+
+msgid ""
+"Умови партнерської програми Led leader: рівні, знижки, бонуси для ділерів та "
+"реселерів."
+msgstr ""
+"Led leader partnership program terms: tiers, discounts, bonuses for dealers "
+"and resellers."
+
+msgid "Компанія Led leader – надійний партнер"
+msgstr "Led leader — a Reliable Partner"
+
+msgid "Співпрацюючи з компанією Led leader Ви купуєте партнера з:"
+msgstr "By partnering with Led leader, you gain a partner with:"
+
+msgid ""
+"довгостроковим досвідом роботи і стратегічним партнерством з виробниками"
+msgstr "long-term experience and strategic partnerships with manufacturers"
+
+msgid "регіональною інфраструктурою включаючи офіси, склади"
+msgstr "regional infrastructure including offices and warehouses"
+
+msgid "персональним менеджером, закріпленим за вашою компанією"
+msgstr "a dedicated personal manager assigned to your company"
+
+msgid "відкритістю та прозорістю співпраці з партнерами"
+msgstr "openness and transparency in partner cooperation"
+
+msgid "стабільними оптовими цінами"
+msgstr "stable wholesale prices"
+
+msgid "наявністю сучасної інформаційної системи"
+msgstr "a modern information system"
+
+msgid ""
+"маркетинговою командою, готовою негайно приступити до співпраці з вашою "
+"компанією"
+msgstr "a marketing team ready to immediately start working with your company"
+
+msgid "польовими силами та системою аналізу ринку"
+msgstr "field forces and a market analysis system"
+
+msgid "інформаційною підтримкою та проведенням конференцій"
+msgstr "information support and conference hosting"
+
+msgid ""
+"Компанія має дуже широкий спектр партнерів та покупців, вони розкидані в "
+"різних куточках Європи"
+msgstr ""
+"The company has a very wide range of partners and buyers spread across "
+"various parts of Europe"
+
+msgid "Закарпатська область:"
+msgstr "Zakarpattia Region:"
+
+msgid "Ужгород"
+msgstr "Uzhhorod"
+
+msgid "Виноградово"
+msgstr "Vynohradiv"
+
+msgid "Мукачево"
+msgstr "Mukachevo"
+
+msgid "Житомирська область:"
+msgstr "Zhytomyr Region:"
+
+msgid "Житомир"
+msgstr "Zhytomyr"
+
+msgid "Малин"
+msgstr "Malyn"
+
+msgid "Радомишль"
+msgstr "Radomyshl"
+
+msgid "Чернігівська область:"
+msgstr "Chernihiv Region:"
+
+msgid "Чернігів"
+msgstr "Chernihiv"
+
+msgid "Бахмач"
+msgstr "Bakhmach"
+
+msgid "Ніжин"
+msgstr "Nizhyn"
+
+msgid "Прилуки"
+msgstr "Pryluky"
+
+msgid "Глибока"
+msgstr "Hlyboka"
+
+msgid "Сумська область:"
+msgstr "Sumy Region:"
+
+msgid "Суми"
+msgstr "Sumy"
+
+msgid "Ромни"
+msgstr "Romny"
+
+msgid "Шостка"
+msgstr "Shostka"
+
+msgid "Рівненська область:"
+msgstr "Rivne Region:"
+
+msgid "Рівне"
+msgstr "Rivne"
+
+msgid "Львівська область:"
+msgstr "Lviv Region:"
+
+msgid "Львів"
+msgstr "Lviv"
+
+msgid "Київська область:"
+msgstr "Kyiv Region:"
+
+msgid "Київ"
+msgstr "Kyiv"
+
+msgid "Біла Церква"
+msgstr "Bila Tserkva"
+
+msgid "Бровари"
+msgstr "Brovary"
+
+msgid "Ірпінь"
+msgstr "Irpin"
+
+msgid "Іванків"
+msgstr "Ivankiv"
+
+msgid "Обухів"
+msgstr "Obukhiv"
+
+msgid "Полтавська область:"
+msgstr "Poltava Region:"
+
+msgid "Полтава"
+msgstr "Poltava"
+
+msgid "Кременчук"
+msgstr "Kremenchuk"
+
+msgid "Івано-Франківська область:"
+msgstr "Ivano-Frankivsk Region:"
+
+msgid "Івано-Франківськ"
+msgstr "Ivano-Frankivsk"
+
+msgid "Калуш"
+msgstr "Kalush"
+
+msgid "Кіровоградська область:"
+msgstr "Kirovohrad Region:"
+
+msgid "Кіровоград"
+msgstr "Kropyvnytskyi"
+
+msgid "Олександрія"
+msgstr "Oleksandriia"
+
+msgid "Світловодськ"
+msgstr "Svitlovodsk"
+
+msgid "Дніпропетровська область:"
+msgstr "Dnipropetrovsk Region:"
+
+msgid "Дніпро"
+msgstr "Dnipro"
+
+msgid "Кам'янське"
+msgstr "Kamianske"
+
+msgid "Жовті Води"
+msgstr "Zhovti Vody"
+
+msgid "Кривий Ріг"
+msgstr "Kryvyi Rih"
+
+msgid "Нікополь"
+msgstr "Nikopol"
+
+msgid "Вінницька область:"
+msgstr "Vinnytsia Region:"
+
+msgid "Вінниця"
+msgstr "Vinnytsia"
+
+msgid "Могилів"
+msgstr "Mohyliv"
+
+msgid "Волинська область:"
+msgstr "Volyn Region:"
+
+msgid "Луцьк"
+msgstr "Lutsk"
+
+msgid "Нововолинськ"
+msgstr "Novovolynsk"
+
+msgid "Миколаївська область:"
+msgstr "Mykolaiv Region:"
+
+msgid "Миколаїв"
+msgstr "Mykolaiv"
+
+msgid "Вознесенськ"
+msgstr "Voznesensk"
+
+msgid "Південноукраїнськ"
+msgstr "Pivdennoukrainsk"
+
+msgid "Запорізька область:"
+msgstr "Zaporizhzhia Region:"
+
+msgid "Мелітополь"
+msgstr "Melitopol"
+
+msgid "Токмак"
+msgstr "Tokmak"
+
+msgid "Тернопільська область:"
+msgstr "Ternopil Region:"
+
+msgid "Тернопіль"
+msgstr "Ternopil"
+
+msgid "Черкаська область:"
+msgstr "Cherkasy Region:"
+
+msgid "Черкаси"
+msgstr "Cherkasy"
+
+msgid "Хмельницька область:"
+msgstr "Khmelnytskyi Region:"
+
+msgid "Хмельницький"
+msgstr "Khmelnytskyi"
+
+msgid "Шепетівка"
+msgstr "Shepetivka"
+
+msgid "Славута"
+msgstr "Slavuta"
+
+msgid "Одеська область:"
+msgstr "Odesa Region:"
+
+msgid "Одеса"
+msgstr "Odesa"
+
+msgid "Ізмаїл"
+msgstr "Izmail"
+
+msgid "Рені"
+msgstr "Reni"
+
+msgid "Херсонська область:"
+msgstr "Kherson Region:"
+
+msgid "Херсон"
+msgstr "Kherson"
+
+msgid "Харківська область:"
+msgstr "Kharkiv Region:"
+
+msgid "Харків"
+msgstr "Kharkiv"
+
+msgid "Чернівецька область:"
+msgstr "Chernivtsi Region:"
+
+msgid "Чернівці"
+msgstr "Chernivtsi"
+
+msgid "Латвія:"
+msgstr "Latvia:"
+
+msgid "Рига"
+msgstr "Riga"
+
+msgid ""
+"Завжди відкриті до діалогу для представлення нашої компанії у Вашому місті."
+msgstr "Always open to dialogue to represent our company in your city."
+
+# ---------------------------------------------------------------------------
+# templates/core/partners_service.html
+# ---------------------------------------------------------------------------
+msgid "Сервіс і гарантія — Led leader"
+msgstr "Service & Warranty — Led leader"
+
+msgid ""
+"Гарантійне обслуговування та сервіс від Led leader. Умови гарантійного "
+"ремонту, авторизовані сервісні центри."
+msgstr ""
+"Warranty service and support from Led leader. Warranty repair conditions, "
+"authorised service centres."
+
+msgid "Гарантійне обслуговування і сервіс"
+msgstr "Warranty Service & Support"
+
+msgid "Гарантійний термін на пропоновані телефони: 1 – 12 і 36 місяців."
+msgstr "Warranty period for offered phones: 1 – 12 and 36 months."
+
+msgid "Гарантію на товар терміном 1 місяць надає Сервісний Центр Led leader."
+msgstr ""
+"A 1-month product warranty is provided by the Led leader Service Centre."
+
+msgid "Щоб скористатися гарантійними зобов'язаннями нашої компанії скачайте"
+msgstr "To use our company's warranty obligations, please download the"
+
+msgid "Акт приймання на гарантійний ремонт"
+msgstr "Warranty Repair Acceptance Form"
+
+msgid "Умови гарантійного ремонту обладнання:"
+msgstr "Equipment Warranty Repair Conditions:"
+
+msgid ""
+"1. Сервісний Центр Led leader здійснює гарантійне обслуговування "
+"абонентського стільникового обладнання відповідно до умов договорів з "
+"фірмами-виробниками або постачальниками обладнання. Власник обладнання має "
+"право на гарантійне обслуговування обладнання в разі якщо:"
+msgstr ""
+"1. The Led leader Service Centre provides warranty service for subscriber "
+"mobile equipment in accordance with agreements with manufacturers or "
+"equipment suppliers. The equipment owner is entitled to warranty service if:"
+
+msgid "Термін гарантійних зобов'язань не закінчився."
+msgstr "The warranty period has not expired."
+
+msgid ""
+"IMEI, модель, колір і комплектація відповідають даним бази проданих "
+"телефонів, що знаходяться на гарантії."
+msgstr ""
+"The IMEI, model, colour and configuration match the records in the database "
+"of phones under warranty."
+
+msgid "Несправність у роботі обладнання виникла не через недбалість Власника."
+msgstr "The malfunction was not caused by the Owner's negligence."
+
+msgid ""
+"Чи не була наслідком використання обладнання не за призначенням або не у "
+"відповідності з правилами експлуатації."
+msgstr ""
+"Was not the result of using the equipment for purposes other than intended "
+"or contrary to the operating rules."
+
+msgid "Чи не виникла при впливі на обладнання вологи або рідини."
+msgstr "Did not arise from exposure to moisture or liquid."
+
+msgid ""
+"Не стала наслідком попадання всередину обладнання інших речовин і істот."
+msgstr ""
+"Was not caused by the entry of foreign substances or objects into the "
+"equipment."
+
+msgid "Чи не була наслідком інших порушень правил експлуатації."
+msgstr "Was not the result of any other violations of the operating rules."
+
+msgid ""
+"2. Використання аксесуарів, не дозволених фірмою-виробником, може вивести "
+"обладнання з ладу, і є порушенням правил експлуатації, яке позбавляє "
+"законної сили будь-які гарантії на обладнання."
+msgstr ""
+"2. The use of accessories not approved by the manufacturer may damage the "
+"equipment and constitutes a violation of operating rules that voids all "
+"warranties on the equipment."
+
+msgid ""
+"3. Гарантія на обладнання втрачається при спробі його розтину або ремонту в "
+"іншому сервісному центрі."
+msgstr ""
+"3. The warranty is void if the equipment is opened or repaired by any other "
+"service centre."
+
+msgid ""
+"4. Максимальний термін гарантійного ремонту обладнання – 14 робочих днів з "
+"дня звернення до Сервісного центру Led leader."
+msgstr ""
+"4. The maximum warranty repair period is 14 business days from the date of "
+"contacting the Led leader Service Centre."
+
+msgid ""
+"Гарантія 12 – 36 місяців надається на оригінальні, сертифіковані "
+"Укрчастотнаглядом UA UCRF; з гарантією 12 – 36 місяців від представництв "
+"фірм-виробників. Обслуговування проводиться у відповідних авторизованих цими "
+"фірмами сервіс-центрах."
+msgstr ""
+"A 12–36 month warranty is provided on original equipment certified by the "
+"Ukrainian State Centre of Radio Frequencies (UA UCRF), with a 12–36 month "
+"warranty from manufacturer representatives. Service is carried out at "
+"authorised service centres designated by the respective manufacturers."
+
+msgid "м. Київ, вул. Марка Вовчка, 18а (Вхід з боку вул. Вербової)"
+msgstr "Kyiv, Marka Vovchka St., 18a (entrance from Verbova St.)"
+
+msgid "м. Київ, пр-т Маяковського 26"
+msgstr "Kyiv, Mayakovskoho Ave., 26"
+
+msgid "бул. Лесі Українки, 4, Київ, 01133"
+msgstr "Lesi Ukrainky Blvd., 4, Kyiv, 01133"
+
+msgid "Комплект поставки обов'язково містить:"
+msgstr "The package must include:"
+
+msgid "мобільний телефон, батарейка, зарядний пристрій;"
+msgstr "mobile phone, battery, charger;"
+
+msgid "оригінальна коробка;"
+msgstr "original box;"
+
+msgid "інструкція;"
+msgstr "instruction manual;"
+
+msgid ""
+"гарантійний талон з адресами і телефонами сервіс-центрів, які виробляють "
+"безкоштовне гарантійне обслуговування."
+msgstr ""
+"warranty card with addresses and phone numbers of service centres providing "
+"free warranty service."
+
+# ---------------------------------------------------------------------------
+# templates/news/detail.html
+# ---------------------------------------------------------------------------
+msgid "Читати оригінал"
+msgstr "Read Original Source"
+
+msgid "Інші новини"
+msgstr "Other News"
+
+msgid "Немає інших новин."
+msgstr "No other news yet."
+
+msgid "Категорії"
+msgstr "Categories"
+
+# ---------------------------------------------------------------------------
+# templates/news/list.html
+# ---------------------------------------------------------------------------
+msgid "Актуальні новини ринку цифрової техніки та новини компанії Led leader."
+msgstr "Latest digital equipment market news and Led leader company updates."
+
+msgid "Детальніше"
+msgstr "Learn More"
+
+msgid "Пагінація"
+msgstr "Pagination"
+
+msgid "Попередня"
+msgstr "Previous"
+
+msgid "Наступна"
+msgstr "Next"
+
+msgid "Новини відсутні."
+msgstr "No news available."

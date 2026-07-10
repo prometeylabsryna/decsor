@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Партнерська програма — Led leader" %}{% endblock %}
+{% block meta_desc %}{% trans "Умови партнерської програми Led leader: рівні, знижки, бонуси для ділерів та реселерів." %}{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="container">
+    <div class="page-banner__inner">
+      <h1 class="page-banner__title">{% trans "Партнерська програма" %}</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">{% trans "Головна" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href="{% url 'core:partners' %}">{% trans "Партнери" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__current">{% trans "Партнерська програма" %}</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="page-layout">
+
+      <aside class="sidebar">
+        <p class="sidebar__heading">{% trans "Партнери" %}</p>
+        <ul class="sidebar__nav">
+          <li><a href="{% url 'core:partners' %}">{% trans "Партнери" %}</a></li>
+          <li><a href="{% url 'core:partners-program' %}" class="active">{% trans "Партнерська програма" %}</a></li>
+          <li><a href="{% url 'core:partners-become' %}">{% trans "Стати партнером" %}</a></li>
+          <li><a href="{% url 'core:partners-service' %}">{% trans "Сервіс і гарантія" %}</a></li>
+        </ul>
+      </aside>
+
+      <div class="content-body" data-reveal="fade-up">
+        <h2>{% trans "Компанія Led leader – надійний партнер" %}</h2>
+        {{ page_content.partners_program_intro|safe }}
+
+        <div class="partner-regions">
+          {% for region in partner_regions %}
+          <div class="partner-regions__item">
+            <p class="partner-regions__title">{{ region.name }}</p>
+            <ul>
+              {% for city in region.cities.splitlines %}
+              <li>{{ city }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="partner-regions__note">{{ page_content.partners_program_outro|safe }}</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

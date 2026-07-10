@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Замовлення та оплата — Led leader" %}{% endblock %}
+{% block meta_desc %}{% trans "Як зробити замовлення та способи оплати в компанії Led leader." %}{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="container">
+    <div class="page-banner__inner">
+      <h1 class="page-banner__title">{% trans "Замовлення та оплата" %}</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">{% trans "Головна" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href="{% url 'core:delivery' %}">{% trans "Доставка" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__current">{% trans "Замовлення та оплата" %}</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="page-layout">
+
+      <aside class="sidebar">
+        <p class="sidebar__heading">{% trans "Доставка" %}</p>
+        <ul class="sidebar__nav">
+          <li><a href="{% url 'core:delivery' %}">{% trans "Доставка" %}</a></li>
+          <li><a href="{% url 'core:delivery-order' %}" class="active">{% trans "Замовлення та оплата" %}</a></li>
+          <li><a href="{% url 'core:delivery-transport' %}">{% trans "Транспортні компанії" %}</a></li>
+        </ul>
+      </aside>
+
+      <div class="content-body" data-reveal="fade-up">
+        <h2>{% trans "Як зробити замовлення" %}</h2>
+        {{ page_content.delivery_order_steps|safe }}
+
+        <h2>{% trans "Способи оплати" %}</h2>
+        {{ page_content.delivery_order_payment|safe }}
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

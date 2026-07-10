@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70">
+  <rect width="220" height="70" rx="8" fill="#1B3F6E"/>
+  <!-- Truck icon -->
+  <g fill="#ffffff">
+    <rect x="12" y="26" width="36" height="22" rx="2"/>
+    <path d="M48 32 L48 48 L64 48 L64 36 L56 26 L48 26 Z"/>
+    <rect x="50" y="28" width="12" height="10" rx="1" fill="#1B3F6E"/>
+    <circle cx="22" cy="50" r="6"/>
+    <circle cx="55" cy="50" r="6"/>
+    <rect x="12" y="44" width="56" height="6" fill="#1B3F6E"/>
+    <circle cx="22" cy="50" r="3" fill="#1B3F6E"/>
+    <circle cx="55" cy="50" r="3" fill="#1B3F6E"/>
+    <rect x="14" y="28" width="14" height="10" rx="1" fill="#1B3F6E"/>
+  </g>
+  <!-- Text -->
+  <text x="80" y="32" font-family="Arial Black,Arial,sans-serif" font-size="20" font-weight="900" fill="#ffffff">SAT</text>
+  <text x="80" y="50" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">Auto Transport Service</text>
+</svg>

@@ -1,0 +1,57 @@
+# HTTPS — після certbot (або ручна підстановка шляхів до сертифікатів)
+# certbot --nginx -d DOMAIN.COM -d www.DOMAIN.COM зазвичай оновлює http.conf автоматично.
+# Цей шаблон — для ручного merge, якщо потрібно.
+
+upstream itmcopy_gunicorn {
+    server 127.0.0.1:8001 fail_timeout=0;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name DOMAIN.COM www.DOMAIN.COM 178.20.157.42;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name DOMAIN.COM www.DOMAIN.COM;
+
+    ssl_certificate     /etc/letsencrypt/live/DOMAIN.COM/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/DOMAIN.COM/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    client_max_body_size 20M;
+
+    access_log /var/log/nginx/itmcopy.access.log;
+    error_log  /var/log/nginx/itmcopy.error.log;
+
+    location /static/ {
+        alias /var/www/itmcopy/staticfiles/;
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    location /media/ {
+        alias /var/www/itmcopy/media/;
+        expires 7d;
+    }
+
+    location /healthz/ {
+        proxy_pass http://itmcopy_gunicorn;
+        proxy_set_header Host $host;
+        access_log off;
+    }
+
+    location / {
+        proxy_pass http://itmcopy_gunicorn;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_read_timeout 120s;
+        proxy_redirect off;
+    }
+}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load i18n contact_tags %}
+
+{% block title %}{% trans "Доставка — Led leader" %}{% endblock %}
+{% block meta_desc %}{% trans "Умови доставки продукції компанії Led leader. Відправка по всій Україні зручним для вас перевізником." %}{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="container">
+    <div class="page-banner__inner">
+      <h1 class="page-banner__title">{% trans "Доставка" %}</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">{% trans "Головна" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__current">{% trans "Доставка" %}</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="page-layout">
+
+      <aside class="sidebar">
+        <p class="sidebar__heading">{% trans "Доставка" %}</p>
+        <ul class="sidebar__nav">
+          <li><a href="{% url 'core:delivery' %}" class="active">{% trans "Доставка" %}</a></li>
+          <li><a href="{% url 'core:delivery-order' %}">{% trans "Замовлення та оплата" %}</a></li>
+          <li><a href="{% url 'core:delivery-transport' %}">{% trans "Транспортні компанії" %}</a></li>
+        </ul>
+      </aside>
+
+      <div class="content-body" data-reveal="fade-up">
+        {{ page_content.delivery_intro|safe }}
+
+        <h2>{% trans "Компанія пропонує своїм клієнтам наступні умови співпраці:" %}</h2>
+        {{ page_content.delivery_conditions|safe }}
+
+        <h2>{% trans "Умови знижок" %}</h2>
+        {{ page_content.delivery_discounts|safe }}
+
+        <h2>{% trans "Відділ продажів:" %}</h2>
+        <ul>
+          <li><a href="tel:{{ site_settings.phone|tel_href }}">{{ site_settings.phone }} ({% trans "багатоканальний" %}) {% trans "внутрішній №:" %} {{ internal_extensions_joined }}</a></li>
+          <li><a href="mailto:{{ site_settings.email_manager_1 }}">{{ site_settings.email_manager_1 }}</a></li>
+          <li><a href="mailto:{{ site_settings.email_manager_2 }}">{{ site_settings.email_manager_2 }}</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

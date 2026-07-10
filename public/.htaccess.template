@@ -1,0 +1,18 @@
+# FREEhost / Passenger — document root → public/
+# Генерується: bash scripts/deploy_freehost.sh htaccess
+
+PassengerEnabled On
+PassengerAppRoot __PROJECT_DIR__
+PassengerPython __PYTHON_BIN__
+PassengerAppType wsgi
+PassengerStartupFile passenger_wsgi.py
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{DOCUMENT_ROOT}/../staticfiles/$1 -f
+    RewriteRule ^static/(.*)$ ../staticfiles/$1 [L]
+
+    RewriteCond %{DOCUMENT_ROOT}/../media/$1 -f
+    RewriteRule ^media/(.*)$ ../media/$1 [L]
+</IfModule>

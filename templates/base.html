@@ -1,0 +1,200 @@
+{% load static i18n lang_tags contact_tags %}{% lang_url 'uk' as uk_url %}{% lang_url 'en' as en_url %}<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a3a8f">
+  {% if site_settings.favicon %}
+  <link rel="icon" href="{{ site_settings.favicon.url }}" type="image/png">
+  <link rel="apple-touch-icon" href="{{ site_settings.favicon.url }}">
+  {% else %}
+  <link rel="icon" href="{% static 'img/favicon.ico' %}" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="{% static 'img/favicon.svg' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+  {% endif %}
+  <title>{% block title %}{% trans "Led leader — Digital Equipment" %}{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}{% trans "Led leader — оптовий дистриб'ютор цифрового обладнання з 2006 року." %}{% endblock %}">
+  <link rel="alternate" hreflang="uk" href="{{ request.scheme }}://{{ request.get_host }}{{ uk_url }}">
+  <link rel="alternate" hreflang="en" href="{{ request.scheme }}://{{ request.get_host }}{{ en_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{{ uk_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}?v={% now "YmdHi" %}">
+  <link rel="stylesheet" href="{% static 'css/pages.css' %}?v={% now "YmdHi" %}">
+</head>
+<body>
+
+<!-- ===== MOBILE NAV OVERLAY ===== -->
+<nav class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="{% trans 'Меню' %}">
+  <button class="nav-overlay__close" id="navClose" aria-label="{% trans 'Закрити меню' %}">&#x2715;</button>
+  <a href="{% url 'core:home' %}">{% trans "Головна" %}</a>
+  <div class="nav-overlay__group">
+    <button class="nav-overlay__toggle" aria-expanded="false">
+      {% trans "Новини" %} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="nav-overlay__sub">
+      <a href="{% url 'news:list' %}">{% trans "Всі новини" %}</a>
+      <a href="{% url 'news:list' %}?cat=market">{% trans "Новини ринку" %}</a>
+      <a href="{% url 'news:list' %}?cat=company">{% trans "Новини компанії" %}</a>
+    </div>
+  </div>
+  <div class="nav-overlay__group">
+    <button class="nav-overlay__toggle" aria-expanded="false">
+      {% trans "Про компанію" %} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="nav-overlay__sub">
+      <a href="{% url 'core:about' %}">{% trans "Про компанію" %}</a>
+      <a href="{% url 'core:cooperation' %}">{% trans "Співпраця" %}</a>
+      <a href="{% url 'core:faq' %}">F.A.Q.</a>
+    </div>
+  </div>
+  <div class="nav-overlay__group">
+    <button class="nav-overlay__toggle" aria-expanded="false">
+      {% trans "Доставка" %} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="nav-overlay__sub">
+      <a href="{% url 'core:delivery' %}">{% trans "Доставка" %}</a>
+      <a href="{% url 'core:delivery-order' %}">{% trans "Замовлення та оплата" %}</a>
+      <a href="{% url 'core:delivery-transport' %}">{% trans "Транспортні компанії" %}</a>
+    </div>
+  </div>
+  <div class="nav-overlay__group">
+    <button class="nav-overlay__toggle" aria-expanded="false">
+      {% trans "Партнери" %} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="nav-overlay__sub">
+      <a href="{% url 'core:partners' %}">{% trans "Партнери" %}</a>
+      <a href="{% url 'core:partners-program' %}">{% trans "Партнерська програма" %}</a>
+      <a href="{% url 'core:partners-become' %}">{% trans "Стати партнером" %}</a>
+      <a href="{% url 'core:partners-service' %}">{% trans "Сервіс і гарантія" %}</a>
+    </div>
+  </div>
+  <a href="{% url 'core:contacts' %}" class="btn btn-primary">{% trans "Контакти" %}</a>
+  <div class="lang-switch lang-switch--overlay">
+    <a href="{{ uk_url }}" hreflang="uk" class="lang-switch__btn{% if LANGUAGE_CODE == 'uk' %} lang-switch__btn--active{% endif %}">UK</a>
+    <span class="lang-switch__sep">|</span>
+    <a href="{{ en_url }}" hreflang="en" class="lang-switch__btn{% if LANGUAGE_CODE == 'en' %} lang-switch__btn--active{% endif %}">EN</a>
+  </div>
+</nav>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="{% url 'core:home' %}" class="header__logo" aria-label="{{ site_settings.site_name }} — {% trans 'на головну' %}">
+        {{ site_settings.site_name }}
+      </a>
+      <nav class="header__nav" aria-label="{% trans 'Навігація' %}">
+        <a href="{% url 'core:home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans "Головна" %}</a>
+
+        <div class="nav-drop">
+          <a href="{% url 'news:list' %}" class="nav-drop__trigger {% if 'novyny' in request.path %}active{% endif %}">
+            {% trans "Новини" %}
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-drop__menu">
+            <a href="{% url 'news:list' %}?cat=market">{% trans "Новини ринку" %}</a>
+            <a href="{% url 'news:list' %}?cat=company">{% trans "Новини компанії" %}</a>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <a href="{% url 'core:about' %}" class="nav-drop__trigger {% if 'pro-kompaniyu' in request.path %}active{% endif %}">
+            {% trans "Про компанію" %}
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-drop__menu">
+            <a href="{% url 'core:cooperation' %}">{% trans "Співпраця" %}</a>
+            <a href="{% url 'core:faq' %}">F.A.Q.</a>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <a href="{% url 'core:delivery' %}" class="nav-drop__trigger {% if 'dostavka' in request.path %}active{% endif %}">
+            {% trans "Доставка" %}
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-drop__menu">
+            <a href="{% url 'core:delivery-order' %}">{% trans "Замовлення та оплата" %}</a>
+            <a href="{% url 'core:delivery-transport' %}">{% trans "Транспортні компанії" %}</a>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <a href="{% url 'core:partners' %}" class="nav-drop__trigger {% if 'partnery' in request.path %}active{% endif %}">
+            {% trans "Партнери" %}
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-drop__menu">
+            <a href="{% url 'core:partners-program' %}">{% trans "Партнерська програма" %}</a>
+            <a href="{% url 'core:partners-become' %}">{% trans "Стати партнером" %}</a>
+            <a href="{% url 'core:partners-service' %}">{% trans "Сервіс і гарантія" %}</a>
+          </div>
+        </div>
+
+        <a href="{% url 'core:contacts' %}" class="header__cta {% if 'kontakty' in request.path %}active{% endif %}">{% trans "Контакти" %}</a>
+      </nav>
+      <div class="lang-switch">
+        <a href="{{ uk_url }}" hreflang="uk" class="lang-switch__btn{% if LANGUAGE_CODE == 'uk' %} lang-switch__btn--active{% endif %}">UK</a>
+        <span class="lang-switch__sep">|</span>
+        <a href="{{ en_url }}" hreflang="en" class="lang-switch__btn{% if LANGUAGE_CODE == 'en' %} lang-switch__btn--active{% endif %}">EN</a>
+      </div>
+      <button class="header__burger" id="burgerBtn" aria-label="{% trans 'Відкрити меню' %}" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+{% block content %}{% endblock %}
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a href="{% url 'core:home' %}" class="footer__logo">{{ site_settings.site_name }}</a>
+        <p class="footer__desc">{{ site_settings.description }}</p>
+      </div>
+      <div>
+        <p class="footer__heading">{% trans "Навігація" %}</p>
+        <ul class="footer__links">
+          <li><a href="{% url 'core:home' %}">{% trans "Головна" %}</a></li>
+          <li><a href="{% url 'news:list' %}">{% trans "Новини" %}</a></li>
+          <li><a href="{% url 'core:about' %}">{% trans "Про компанію" %}</a></li>
+          <li><a href="{% url 'core:delivery' %}">{% trans "Доставка" %}</a></li>
+          <li><a href="{% url 'core:partners' %}">{% trans "Партнери" %}</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">{% trans "Про компанію" %}</p>
+        <ul class="footer__links">
+          <li><a href="{% url 'core:cooperation' %}">{% trans "Співпраця" %}</a></li>
+          <li><a href="{% url 'core:faq' %}">F.A.Q.</a></li>
+          <li><a href="{% url 'core:partners-program' %}">{% trans "Партнерська програма" %}</a></li>
+          <li><a href="{% url 'core:partners-service' %}">{% trans "Сервіс і гарантія" %}</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">{% trans "Контакти" %}</p>
+        <ul class="footer__links">
+          <li><a href="mailto:{{ site_settings.email }}">{{ site_settings.email }}</a></li>
+          <li><a href="{% url 'core:contacts' %}">{% trans "Написати нам" %}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; {% now "Y" %} {{ site_settings.site_name }}. {% trans "Всі права захищені." %}</span>
+      <a href="https://www.prometeylabs.com/" class="footer__dev" target="_blank" rel="noopener noreferrer">{% trans "Розроблено в PrometeyLabs" %}</a>
+    </div>
+  </div>
+</footer>
+
+<script src="{% static 'js/reveal.js' %}" defer></script>
+<script src="{% static 'js/nav.js' %}" defer></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

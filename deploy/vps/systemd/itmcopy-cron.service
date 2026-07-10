@@ -1,0 +1,11 @@
+[Unit]
+Description=itmCopy — імпорт новин ринку (RSS)
+After=network.target itmcopy.service
+
+[Service]
+Type=oneshot
+User=deploy
+Group=deploy
+WorkingDirectory=/var/www/itmcopy
+EnvironmentFile=/var/www/itmcopy/.env
+ExecStart=/bin/bash /var/www/itmcopy/scripts/fetch_market_news.sh

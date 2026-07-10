@@ -1,0 +1,18 @@
+[Unit]
+Description=itmCopy Django (Gunicorn)
+After=network.target mysql.service postgresql.service
+
+[Service]
+Type=notify
+User=USER
+Group=USER
+WorkingDirectory=/home/USER/domains/DOMAIN.COM
+EnvironmentFile=/home/USER/domains/DOMAIN.COM/.env
+Environment=DJANGO_SETTINGS_MODULE=config.settings.production
+ExecStart=/home/USER/domains/DOMAIN.COM/.venv/bin/gunicorn -c deploy/gunicorn/gunicorn.conf.py
+ExecReload=/bin/kill -s HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

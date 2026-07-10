@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Транспортні компанії — Led leader" %}{% endblock %}
+{% block meta_desc %}{% trans "Перелік транспортних компаній для доставки замовлень від Led leader по Україні та Європі." %}{% endblock %}
+
+{% block content %}
+<div class="page-banner">
+  <div class="container">
+    <div class="page-banner__inner">
+      <h1 class="page-banner__title">{% trans "Транспортні компанії" %}</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">{% trans "Головна" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href="{% url 'core:delivery' %}">{% trans "Доставка" %}</a>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__current">{% trans "Транспортні компанії" %}</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="page-layout">
+
+      <aside class="sidebar">
+        <p class="sidebar__heading">{% trans "Доставка" %}</p>
+        <ul class="sidebar__nav">
+          <li><a href="{% url 'core:delivery' %}">{% trans "Доставка" %}</a></li>
+          <li><a href="{% url 'core:delivery-order' %}">{% trans "Замовлення та оплата" %}</a></li>
+          <li><a href="{% url 'core:delivery-transport' %}" class="active">{% trans "Транспортні компанії" %}</a></li>
+        </ul>
+      </aside>
+
+      <div class="content-body" data-reveal="fade-up">
+        <h2>{% trans "Наші транспортні партнери" %}</h2>
+        {{ page_content.delivery_transport_intro|safe }}
+
+        <div class="carrier-list">
+
+          {% for carrier in carriers %}
+          <article class="carrier-card">
+            {% if carrier.logo %}
+            <div class="carrier-card__logo">
+              <img src="{{ carrier.logo.url }}" alt="{{ carrier.name }}" width="160" height="56" loading="lazy">
+            </div>
+            {% else %}
+            <div class="carrier-card__logo carrier-card__logo--icon">
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="28" cy="28" r="28" fill="var(--clr-bg)"/>
+                <path d="M28 14a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm0 18c8.84 0 16 3.58 16 8v2H12v-2c0-4.42 7.16-8 16-8z" fill="var(--clr-primary)"/>
+              </svg>
+            </div>
+            {% endif %}
+            <div class="carrier-card__body">
+              <h3>{{ carrier.name }}</h3>
+              <p>{{ carrier.description }}</p>
+            </div>
+          </article>
+          {% endfor %}
+
+        </div>
+
+        <div class="carrier-note">
+          <strong>{% trans "Примітка:" %}</strong> {{ page_content.delivery_transport_note|safe }}
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}
