@@ -1,0 +1,42 @@
+{% load i18n %}
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin="anonymous">
+<div
+  id="europe-map"
+  class="europe-leaflet-map"
+  role="img"
+  aria-label="{% trans 'Карта Європи з позначкою Київ' %}">
+</div>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLEo="
+  crossorigin="anonymous"></script>
+<script>
+(function () {
+  var map = L.map('europe-map', {
+    scrollWheelZoom: false,
+    zoomControl: true
+  }).setView([54, 15], 4);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+    maxZoom: 19
+  }).addTo(map);
+
+  var pinIcon = L.divIcon({
+    className: 'europe-map-pin',
+    html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 48" width="32" height="48" aria-hidden="true"><path d="M16 0C7.163 0 0 7.163 0 16c0 12 16 32 16 32S32 28 32 16C32 7.163 24.837 0 16 0z" fill="#e53935"/><circle cx="16" cy="16" r="7" fill="#fff"/></svg>',
+    iconSize: [32, 48],
+    iconAnchor: [16, 48],
+    popupAnchor: [0, -50]
+  });
+
+  L.marker([50.4501, 30.5234], { icon: pinIcon })
+    .addTo(map)
+    .bindPopup('<strong>{% trans "Київ" %}</strong><br>{% trans "Україна" %}')
+    .openPopup();
+}());
+</script>

@@ -42,14 +42,7 @@
             {% if site_settings.map_embed_code %}
               {{ site_settings.map_embed_code|safe }}
             {% else %}
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-10.5%2C34.5%2C40.5%2C71.5&amp;layer=mapnik"
-                title="{% trans 'Карта Європи' %}"
-                loading="lazy"
-                referrerpolicy="no-referrer"
-                sandbox="allow-scripts allow-same-origin"
-                aria-label="{% trans 'Карта Європи' %}">
-              </iframe>
+              {% include 'core/_europe_map.html' %}
             {% endif %}
           </div>
 
