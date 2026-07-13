@@ -70,7 +70,7 @@ class SiteSettings(SingletonModel):
         "Код карти (iframe з Google Maps або OpenStreetMap)",
         blank=True,
         default=(
-            '<iframe src="https://maps.google.com/maps?q=Kyiv,+Ukraine&z=4&output=embed"'
+            '<iframe src="https://maps.google.com/maps?q=Kyiv,+Ukraine&z=5&output=embed"'
             ' width="600" height="450" style="border:0;"'
             ' allowfullscreen="" loading="lazy"'
             ' referrerpolicy="strict-origin-when-cross-origin"></iframe>'

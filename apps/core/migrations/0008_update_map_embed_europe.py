@@ -2,7 +2,7 @@
 from django.db import migrations
 
 NEW_EMBED = (
-    '<iframe src="https://maps.google.com/maps?q=Kyiv,+Ukraine&z=4&output=embed"'
+    '<iframe src="https://maps.google.com/maps?q=Kyiv,+Ukraine&z=5&output=embed"'
     ' width="600" height="450" style="border:0;"'
     ' allowfullscreen="" loading="lazy"'
     ' referrerpolicy="strict-origin-when-cross-origin"></iframe>'
